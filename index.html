@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="website about computer programming"> 
+    <meta name="author" content="O'Ryan Edmondson">
+     <title> My Portfolio - O'Ryan Edmondson </title>
+     <style>  h1, h2, h3 { font-family: Arial, sans-serif; color: #9045bf; }
+        a:link { color: black; } 
+        a:visited { color: blue; }
+        a:hover { color: red; } 
+        a:active { color: darkred; } 
+     </style>
+</head>   
+<body>
+    <header>
+        <h1> An Autobiography</h1>
+    </header>
+    <nav>
+
+    </nav>
+    <main>
+        <h2> About Me </h2>
+        <h3>My Classes:</h3>
+        <ul> <li>Coding </li>
+            <li> Networking</li>
+        </ul>
+        <h3>Classes Ranked:</h3>
+        <ol> <li>Operating systems </li>
+            <li> Coding</li>
+            <li>Networking</li>
+            <li><del>english</del></li>
+        </ol>
+    </main>
+     <hr>
+     <br>
+     <br>
+     <br>
+     <p> I am currently taking a course in programming. </p>
+     <!--external link-->
+     <a href="https://www.epicgames.com/site/en-US/home">EPIC GAMES</a>
+     <!--How to input a basic table-->
+     <table>
+        <thead>
+            <tr>
+                <th>monkeys</th>
+                <th>mexicans</th>
+                <th>asaians</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>23</td>
+                <td>3</td>
+                <td>500</td>
+            </tr>
+            <tr>
+                <td>26</td>
+                <td>35</td>
+                <td>65</td>
+            </tr>
+            <tr>
+                <td><em>black</em></td>
+                <td><b>brown</b></td>
+                <td><mark>yellow</mark></td>
+            </tr>
+        </tbody>
+     </table>
+     <!--How to input a picture-->
+     <p><img
+            src="https://th.bing.com/th/id/OIP.dcc6k9xPbT1-DTJIrBkOwAHaLH?w=194&h=291&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+            width="300" height="300" alt="read icon"></p>
+     <!--Form must be in the body-->
+     <form action="/submit"method="POST">
+        <label>Username:
+            <input type="text" name="Username">
+        </label>
+        <label>Password:
+            <input type="password" name="password">
+        </label>
+     </form>
+<!--feildset creates the box and legend puts the words along the box-->
+     <fieldset>
+        <legend>Preferred Contact Method:</legend>
+        <label>
+            <input type="radio" name="contact" value="email">
+            Email
+        </label>
+        <label>
+            <input type="radio" name="contact" value="Phone">
+            Phone
+        </label>
+        <label>
+            <input type="radio" name="contact" value="Fax">
+            Fax
+        </label>
+        <label>
+            <input type="radio" name="contact" value="Text">
+            Text
+        </label>
+     </fieldset>
+<!--changing type to checkbox you can pick multiple-->
+     <fieldset>
+        <legend>Preferred Contact Method:</legend>
+        <label>
+            <input type="checkbox" name="contact" value="email">
+            Email
+        </label>
+        <label>
+            <input type="checkbox" name="contact" value="Phone">
+            Phone
+        </label>
+        <label>
+            <input type="checkbox" name="contact" value="Fax">
+            Fax
+        </label>
+        <label>
+            <input type="checkbox" name="contact" value="Text">
+            Text
+        </label>
+     </fieldset>
+     <!--drop down menu when you have 5 or more options-->
+     <label for="food">
+        Food:
+     </label>
+     <select id="food" name="food">
+        <option value="">Choose a food...</option>
+        <option value="br">burger</option>
+        <option value="pz">pizza</option>
+        <option value="ch">chips</option>
+        <option value="sw">sandwich</option>
+        <option value="cd">candy</option>
+     </select>
+     <!--makes sure things arent beside each other open and close paragraph-->
+     <p></p>
+     <!--Big Text Box-->
+     <label for="message">
+        Message:
+     </label>
+     <textarea id="message"
+     name="message" rows="6" cols="60">
+    </textarea>
+    <!--Uploading an image-->
+    <form action="/upload-image" method="POST"
+    enctype="multipart/form-data">
+    <feildset> 
+        <legend>Upload Profile Picture</legend>
+        <label>
+            Profile Picture:
+            <!--input can be swaped for pics/documents <input type="file" accept=".jpg,.jpeg,.png,.gif" 
+data-max-size="5000000"> 
+- Document
+<input type="file" accept=".pdf,.doc,.docx"> 
+- Multiple types
+<input type="file" accept=".pdf,.jpg,.png,.docx">-->
+            <input type="file" name="profile_picture"
+            accept="image/jpeg,image/png,image/gif" data-max-size="5000000"
+            required>
+        </label>
+        <small>Max file size: 5MB. Accepted formats: JPG, PNG, gif
+        </small>
+    </feildset>
+</form>
+<button type="submit"
+formaction="/login">
+Login
+</button>
+<button type="submit"
+formaction="/register">
+Register
+</button>
+<!--required-->
+<label>
+    Name:
+    <input type="text" placeholder="Enter your name" 
+    required maxlength="50">
+</label>
+<p></p>
+<label>
+    Email Address:
+    <input type="email"
+    placeholder="email@example.com" required>
+</label>
+<p></p>
+<!--phone number/postal code-->
+<label>
+    Postal Code:
+    <input type="text"
+    pattern="[A-Za-z][0-9][A-Za-z] 
+    [0-9][A-Za-z][0-9]"
+    placeholder="A1A 1A1"
+    title="Format: A1A 1A1">
+</label>
+<p></p>
+  <audio controls autoplay muted>
+    <source src="horse.ogg"
+    type="audio/ogg">
+    <source src="horse.mp3"
+    type="audio/mpeg">
+  </audio>
+   <address>
+         <a href="mailto:john@example.com">
+ John Doe</a><br>
+         123 Main Street<br>
+         City, State 12345
+   </address>
+   <abbr title="Frequently Asked 
+Questions">FAQ</abbr>
+
+ 
+ </body>
+ </html>
